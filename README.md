@@ -62,6 +62,8 @@ These rules were heavily inspired by the insightful perspectives of **Jono Alder
 
 Jono's work deeply resonates with my aim for a more resilient and performant web. We also recommend his equally thought-provoking piece, ["JavaScript Broke The Web And Called It Progress"](https://www.jonoalderson.com/conjecture/javascript-broke-the-web-and-called-it-progress/), for further reading on the philosophy behind building a better web.
 
+Also the tweet that triggered my curiosity into non-SPA - ["@levelsio not knowing what state is in react."](https://x.com/levelsio/status/1945542563521249659)
+
 ---
 
 ##  🤝Contributing
