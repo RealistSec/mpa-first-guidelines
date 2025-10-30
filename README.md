@@ -1,6 +1,7 @@
 
 # MPA Mandate, Rules & Guidelines for AI-Assisted Development Tools
-Copilot Instructions: MPA-First Development Mandate | Guiding principles for building performant, resilient Multi-Page Applications. Focus on native web platform strengths, minimal JS, and robust SEO.
+
+Guiding principles for building performant, resilient Multi-Page Applications. Focus on native web platform strengths, minimal JS, and robust SEO.
 
 <details>
 <summary><h2>💡 The Problem</h2></summary>
@@ -20,39 +21,135 @@ This repository provides a concise set of development rules championing a **Mult
 
 </details>
 
-## 🚀 How to Guide Your AI Agent with These Rules
+## 📁 Repository Structure
 
-To ensure your AI agent (e.g., GitHub Copilot, Cursor, Claude Code, Gemini CLI) or IDE's code generation strictly adheres to the MPA-First Mandate, follow these steps:
+This repository contains MPA-First guidelines formatted specifically for each major AI coding assistant:
 
-<details>
-<summary>1. 📋 **Copy the rules**</summary>
+```
+mpa-first-guidelines/
+├── .cursor/
+│   └── rules/
+│       ├── mpa-strict-rules.mdc        # Cursor IDE (strict: vanilla JS only)
+│       └── mpa-relaxed-rules.mdc       # Cursor IDE (relaxed: jQuery allowed)
+├── .windsurf/
+│   ├── mpa-strict-rules.md             # Windsurf IDE (strict)
+│   └── mpa-relaxed-rules.md            # Windsurf IDE (relaxed)
+├── .gemini/
+│   ├── GEMINI-MPA-STRICT.md            # Gemini CLI (strict)
+│   └── GEMINI-MPA-RELAXED.md           # Gemini CLI (relaxed)
+├── .claude/
+│   ├── mpa-strict-instructions.md      # Claude Desktop/Projects (strict)
+│   └── mpa-relaxed-instructions.md     # Claude Desktop/Projects (relaxed)
+├── .github/
+│   └── agents/
+│       ├── mpa-strict-agent.md         # GitHub Copilot CLI Agent (strict)
+│       └── mpa-relaxed-agent.md        # GitHub Copilot CLI Agent (relaxed)
+├── gpt4-codex/
+│   ├── mpa-strict-system-prompt.md     # GPT-4/Codex (strict)
+│   └── mpa-relaxed-system-prompt.md    # GPT-4/Codex (relaxed)
+├── mpa-rules.md                         # Original strict rules
+├── relaxed-mpa-rules.md                 # Original relaxed rules (jQuery)
+└── README.md
+```
 
-* **For GitHub Copilot (IDE Integration):** Copy the full content of `mpa-rules.md` into a file named `.github/copilot-instructions.md` at the root of your repository. This is where Copilot looks for project-specific instructions.
-* **For Other AI Agents/CLIs:** Paste the core content of these rules directly into your agent's designated "system prompt," "custom instructions," or "knowledge base" file/section.
-</details>
+### 📝 Two Versions Available
 
-<details>
-<summary>2. 🔗 **Explicitly Instruct/Reference Your AI**</summary>
+Each AI assistant has **two versions** of the MPA guidelines:
 
-* **Within `.github/copilot-instructions.md`:** Ensure your `copilot-instructions.md` includes a clear directive at the top, like:
-    ```markdown
-    ---
-    description: All code generation and suggestions must strictly follow the MPA-First Development Mandate detailed in this repository.
-    applyTo: "**"
-    ---
-    ```
+1. **Strict Rules** - Vanilla JavaScript ES2020+ only, no libraries or frameworks
+2. **Relaxed Rules** - Allows jQuery for progressive enhancement
 
+Choose the version that best fits your project requirements.
 
-* **In AI Chat Prompts:** When interacting directly with your AI agent, reinforce the mandate early in your conversation or prompt. For example:
+## 🚀 Setup Instructions for Your AI Assistant
 
-    ```
-    "Please generate [X feature] code, strictly adhering to the MPA-First rules from our project's `.github/copilot-instructions.md` (or the linked `mpa-rules.md`). Remember, no SPA frameworks, vanilla JS for enhancement only, and server-rendered HTML."
-    ```
-    * **Tip:** The more explicit you are in your prompts, the better the AI will align with your desired output.
+### For Cursor IDE
 
-</details>
+1. The rules are already in place in `.cursor/rules/`
+2. Cursor will automatically detect and use these `.mdc` files
+3. Choose which rule to apply:
+   - **Strict**: Use `mpa-strict-rules.mdc` (always applied)
+   - **Relaxed**: Use `mpa-relaxed-rules.mdc` (manually applied with `@mpa-relaxed-rules`)
 
-This uses `details`/`summary` for collapsibility, bolding, code blocks for clarity, and a `Tip` for extra advice. The language is more direct and action-oriented.
+### For Windsurf IDE
+
+1. Copy the appropriate file to your project root:
+   ```bash
+   # For strict rules
+   cp .windsurf/mpa-strict-rules.md .windsurfrules
+   
+   # For relaxed rules (jQuery)
+   cp .windsurf/mpa-relaxed-rules.md .windsurfrules
+   ```
+2. Or edit workspace rules via: Settings > Set Workspace AI Rules > Edit Rules
+
+### For Gemini CLI
+
+1. Copy the appropriate file to your Gemini CLI context directory:
+   ```bash
+   # For strict rules
+   cp .gemini/GEMINI-MPA-STRICT.md ~/.gemini/GEMINI.md
+   
+   # For relaxed rules (jQuery)
+   cp .gemini/GEMINI-MPA-RELAXED.md ~/.gemini/GEMINI.md
+   ```
+2. Or place at project root: `.gemini/GEMINI.md`
+
+### For Claude Desktop / Claude Projects
+
+1. Open your Claude Project settings
+2. Copy the content from the appropriate file:
+   - **Strict**: `.claude/mpa-strict-instructions.md`
+   - **Relaxed**: `.claude/mpa-relaxed-instructions.md`
+3. Paste into the "Custom Instructions" section of your Claude Project
+
+### For GitHub Copilot CLI
+
+1. The agent files are already in place in `.github/agents/`
+2. To use the coding agent:
+   ```bash
+   # For strict rules
+   gh copilot agent @mpa-strict-agent
+   
+   # For relaxed rules (jQuery)
+   gh copilot agent @mpa-relaxed-agent
+   ```
+
+### For GitHub Copilot IDE Integration
+
+1. Copy the appropriate original file to `.github/copilot-instructions.md`:
+   ```bash
+   # For strict rules
+   cp mpa-rules.md .github/copilot-instructions.md
+   
+   # For relaxed rules (jQuery)
+   cp relaxed-mpa-rules.md .github/copilot-instructions.md
+   ```
+2. GitHub Copilot will automatically use this file for context
+
+### For GPT-4 / OpenAI Codex
+
+1. Copy the content from the appropriate file:
+   - **Strict**: `gpt4-codex/mpa-strict-system-prompt.md`
+   - **Relaxed**: `gpt4-codex/mpa-relaxed-system-prompt.md`
+2. Use as your system prompt in:
+   - ChatGPT Custom GPT instructions
+   - OpenAI API system message
+   - Any GPT-4 based coding assistant configuration
+
+## 💡 Quick Start
+
+1. **Choose your AI assistant** from the setup instructions above
+2. **Choose your version**: Strict (vanilla JS) or Relaxed (jQuery allowed)
+3. **Copy/configure** the appropriate file for your tool
+4. **Start coding** with MPA-First principles enforced by your AI assistant
+
+## 📖 Original Rules Documents
+
+- [`mpa-rules.md`](./mpa-rules.md) - Original comprehensive strict rules
+- [`relaxed-mpa-rules.md`](./relaxed-mpa-rules.md) - Original relaxed rules with jQuery
+
+These documents contain the full, detailed guidelines. The assistant-specific versions are formatted adaptations of these core rules.
 
 ---
 
