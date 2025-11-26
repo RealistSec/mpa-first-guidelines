@@ -6,8 +6,17 @@ This is a **reference documentation repository** containing MPA (Multi-Page Appl
 
 ## Key Files & Their Roles
 
+**Base rule files:**
 - **`mpa-rules.md`** - Comprehensive, strict MPA-first mandate with strict PHP & vanilla JS only. This is the primary reference document.
-- **`relaxed-mpa-rules.md`** - Variant ruleset allowing full use of PHP & jQuery for progressive enhancement while maintaining MPA architecture.
+
+- **`mpa-relaxed-rules.md`** - Variant ruleset allowing full use of PHP & jQuery for progressive enhancement while maintaining MPA architecture.
+
+**Assistant-specific base instruction files:**
+- **`.github/agents/mpa-strict-agent.md`** - Copilot agent-specific instructions file based on `mpa-rules.md` for strict MPA adherence.
+
+- **`.github/agents/mpa-relaxed-agent.md`** - Copilot agent-specific instructions file based on `mpa-relaxed-rules.md` for a more lenient MPA approach.
+
+**Documentation:**
 - **`README.md`** - User-facing documentation explaining the problem, solution, and how to integrate these rules into AI coding workflows.
 
 ## Writing Style & Tone
@@ -24,7 +33,8 @@ When editing these guidelines:
 ### Adding New Rules or Sections
 
 1. **Keep examples realistic** - Use patterns that would appear in actual projects
-2. **Maintain parallelism** - Both `mpa-rules.*` and `relaxed-mpa-rules.*` should cover the same topics in the same order
+2. **Maintain parallelism** - Both `mpa-rules.*` with `.github/agents/mpa-strict-agent.md` and `mpa-relaxed-rules.*` with `.github/agents/mpa-relaxed-agent.md`
+ should cover the same topics in the same order
 3. **Update the table of contents** - If you add major sections, ensure navigation is clear
 
 ### Updating Existing Content
@@ -32,6 +42,7 @@ When editing these guidelines:
 - **Preserve the document structure** - The current flow (Prime Directive → HTML → CSS → PHP → JS → Security) is intentional
 - **Keep code examples modern** - Target current 2025-26 web standards (PHP 8.1+, ES2020+, modern CSS)
 - **Maintain accessibility focus** - A11Y is not optional in these guidelines
+- **Update agent files in parallel** - When modifying base rule files, ensure corresponding assistant-specific files are updated to maintain consistency, keeping them concise and directive for AI prompts
 
 ## Technical Constraints
 
@@ -78,3 +89,7 @@ If a user wants to make rules more lenient:
 - **Include accessibility attributes** - `alt` text, `aria-label`, proper `<label>` associations
 - **Show security patterns** - CSRF tokens, parameterized queries, CSP headers
 - **Demonstrate modern CSS** - Grid, Flexbox, Custom Properties, View Transitions
+
+## Adapting for Different AI Assistants
+
+When integrating these guidelines into other AI tools (e.g., Cursor, Claude, Codex), prioritize the assistant-specific files (e.g., `.github/agents/mpa-strict-agent.md`) as the primary source of truth for prompts. These are condensed and directive, making them ideal for AI consumption. Fork and customize them for the target assistant's format, maintaining parallelism with the base rule files. Test integrations to ensure strict adherence to MPA principles and progressive enhancement.

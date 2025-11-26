@@ -37,21 +37,18 @@ Choose the version that best fits your project requirements.
 
 ### Getting Started
 
-First, clone this repository to get all the MPA-First guideline files:
+<details>
+<summary><strong>First, clone this repository to get all the MPA-First guideline files:</strong></summary>
 
 ```sh
 git clone https://github.com/RealistSec/mpa-first-guidelines.git
 cd mpa-first-guidelines
 ```
 
-Then choose your AI assistant below and follow the specific setup instructions.
+</details>
 
-**Quick cleanup:** After cloning, you can remove unneeded assistant folders with:
 
-```sh
-# Unix/Linux/macOS/Windows (Bash/Zsh/PowerShell 7.4+) - Keep only what you need, remove the rest
-rm -r -force .cursor/ .windsurf/ .gemini/ .claude/ GPT-5-Codex/ .github/
-```
+### Then choose your AI assistant below and follow the specific setup instructions.
 
 ### For GitHub Copilot IDE Integration
 
@@ -59,10 +56,10 @@ rm -r -force .cursor/ .windsurf/ .gemini/ .claude/ GPT-5-Codex/ .github/
 
    ```sh
    # For strict rules
-   cp .github/agents/mpa-strict-agent.md .github/agents/mpa-strict-agent.md
+   cp mpa-strict-agent.md .github/agents/mpa-strict-agent.md
 
    # For relaxed rules (jQuery allowed)
-   cp .github/agents/mpa-relaxed-agent.md .github/agents/mpa-relaxed-agent.md
+   cp mpa-relaxed-agent.md .github/agents/mpa-relaxed-agent.md
    ```
 
 2. Add a reference to the agent file in your `.github/copilot-instructions.md` (create the file if it doesn't exist):
@@ -195,6 +192,14 @@ The agent files are now in place in `.github/agents/`
 
 </details>
 
+**Quick cleanup:** After cloning, you can remove unneeded assistant folders with:
+
+```sh
+# Unix/Linux/macOS/Windows(Current version) (Bash/Zsh/PowerShell 7.4+) - Keep only what you need, remove the rest
+rm -r -force .cursor/ .windsurf/ .gemini/ .claude/ GPT-5_and_GPT-5-Codex/ .github/ 
+```
+
+
 ## 📁 Repository Structure
 
 This repository contains MPA-First guidelines formatted specifically for each major AI coding assistant:
@@ -218,18 +223,18 @@ mpa-first-guidelines/
 │   └── agents/
 │       ├── mpa-strict-agent.md         # GitHub Copilot CLI Agent (strict)
 │       └── mpa-relaxed-agent.md        # GitHub Copilot CLI Agent (relaxed)
-├── gpt4-codex/
-│   ├── mpa-strict-system-prompt.md     # GPT-4/Codex (strict)
-│   └── mpa-relaxed-system-prompt.md    # GPT-4/Codex (relaxed)
+├── GPT-5_and_GPT-5-Codex/
+│   ├── mpa-strict-system-prompt.md     # GPT-5/Codex (strict)
+│   └── mpa-relaxed-system-prompt.md    # GPT-5/Codex (relaxed)
 ├── mpa-rules.md                         # Original strict rules
-├── relaxed-mpa-rules.md                 # Original relaxed rules (jQuery)
+├── mpa-relaxed-rules.md                 # Original relaxed rules (jQuery)
 └── README.md
 ```
 
 ## 📖 Original Rules Documents
 
 * [`mpa-rules.md`](./mpa-rules.md) - Original comprehensive strict rules
-* [`relaxed-mpa-rules.md`](./relaxed-mpa-rules.md) - Original relaxed rules with jQuery
+* [`mpa-relaxed-rules.md`](./mpa-relaxed-rules.md) - Original relaxed rules with jQuery
 
 These documents contain the full, detailed guidelines. The assistant-specific versions are formatted adaptations of these core rules.
 
