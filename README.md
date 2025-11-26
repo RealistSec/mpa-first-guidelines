@@ -175,6 +175,122 @@ The agent files are now in place in `.github/agents/`
 
 </details>
 
+### For Claude Code CLI
+
+<details>
+<summary><strong>Expand for Claude Code CLI setup</strong></summary>
+
+1. Copy the appropriate file to your project root as `CLAUDE.md`:
+
+   ```sh
+   # For strict rules
+   cp claude-code/CLAUDE-MPA-STRICT.md CLAUDE.md
+
+   # For relaxed rules (jQuery allowed)
+   cp claude-code/CLAUDE-MPA-RELAXED.md CLAUDE.md
+   ```
+
+2. Claude Code will automatically read `CLAUDE.md` from your project root.
+
+</details>
+
+### For OpenAI Codex CLI
+
+<details>
+<summary><strong>Expand for OpenAI Codex CLI setup</strong></summary>
+
+1. Copy the appropriate file to your project root as `AGENTS.md`:
+
+   ```sh
+   # For strict rules
+   cp openai-codex/AGENTS-MPA-STRICT.md AGENTS.md
+
+   # For relaxed rules (jQuery allowed)
+   cp openai-codex/AGENTS-MPA-RELAXED.md AGENTS.md
+   ```
+
+2. OpenAI Codex will automatically read `AGENTS.md` from your project root.
+
+</details>
+
+### For Cline
+
+<details>
+<summary><strong>Expand for Cline setup</strong></summary>
+
+1. Copy the appropriate file to your project root:
+
+   ```sh
+   # For strict rules
+   cp .cline/mpa-strict.md .clinerules
+
+   # For relaxed rules (jQuery allowed)
+   cp .cline/mpa-relaxed.md .clinerules
+   ```
+
+2. Or create a `.clinerules/` directory for multiple rule files.
+
+</details>
+
+### For Roo Code
+
+<details>
+<summary><strong>Expand for Roo Code setup</strong></summary>
+
+1. Copy the rules to your project:
+
+   ```sh
+   # For strict rules
+   mkdir -p .roo/rules
+   cp .roo/rules/mpa-strict.md .roo/rules/
+
+   # For relaxed rules (jQuery allowed)
+   mkdir -p .roo/rules
+   cp .roo/rules/mpa-relaxed.md .roo/rules/
+   ```
+
+2. Or use a single `.roorules` file in your project root.
+
+</details>
+
+### For JetBrains AI Assistant
+
+<details>
+<summary><strong>Expand for JetBrains AI Assistant setup</strong></summary>
+
+1. Open your JetBrains IDE (IntelliJ IDEA, WebStorm, PhpStorm, etc.)
+2. Go to **Settings → Tools → AI Assistant → Prompt Library**
+3. Copy prompts from `jetbrains-ai/mpa-prompts.md`
+4. Add them to your prompt library
+
+</details>
+
+### For Augment Code / Kilo Code / Kiro / Qwen Coder
+
+<details>
+<summary><strong>Expand for other AI assistants setup</strong></summary>
+
+Copy the appropriate instructions file to your project and configure according to each tool's documentation:
+
+- **Augment Code**: `augment-code/mpa-strict.md` or `mpa-relaxed.md`
+- **Kilo Code**: `kilo-code/mpa-strict.md` or `mpa-relaxed.md`
+- **Kiro**: `kiro/mpa-strict.md` or `mpa-relaxed.md`
+- **Qwen Coder**: `qwen-coder/mpa-strict.md` or `mpa-relaxed.md`
+
+</details>
+
+### For Bolt.new / Lovable / V0.app / Replit
+
+<details>
+<summary><strong>Expand for system prompt-based tools setup</strong></summary>
+
+1. Copy the content from the appropriate file:
+   * **Strict**: `system-prompts/mpa-strict-system-prompt.md`
+   * **Relaxed**: `system-prompts/mpa-relaxed-system-prompt.md`
+2. Paste as your system prompt or custom instructions in the platform's settings.
+
+</details>
+
 ### For GPT-5 / OpenAI Codex
 
 <details>
@@ -206,28 +322,76 @@ This repository contains MPA-First guidelines formatted specifically for each ma
 
 ```text
 mpa-first-guidelines/
-├── .cursor/
+│
+├── .github/                              # GitHub Copilot (Source of Truth)
+│   ├── agents/
+│   │   ├── mpa-strict-agent.md          # Copilot Coding Agent (strict)
+│   │   └── mpa-relaxed-agent.md         # Copilot Coding Agent (relaxed)
+│   └── copilot-instructions.md          # Copilot IDE instructions
+│
+├── .cursor/                              # Cursor IDE
 │   └── rules/
-│       ├── mpa-strict-rules.mdc        # Cursor IDE (strict: vanilla JS only)
-│       └── mpa-relaxed-rules.mdc       # Cursor IDE (relaxed: jQuery allowed)
-├── .windsurf/
-│   ├── mpa-strict-rules.md             # Windsurf IDE (strict)
-│   └── mpa-relaxed-rules.md            # Windsurf IDE (relaxed)
-├── .gemini/
-│   ├── GEMINI-MPA-STRICT.md            # Gemini CLI (strict)
-│   └── GEMINI-MPA-RELAXED.md           # Gemini CLI (relaxed)
-├── .claude/
-│   ├── mpa-strict-instructions.md      # Claude Desktop/Projects (strict)
-│   └── mpa-relaxed-instructions.md     # Claude Desktop/Projects (relaxed)
-├── .github/
-│   └── agents/
-│       ├── mpa-strict-agent.md         # GitHub Copilot CLI Agent (strict)
-│       └── mpa-relaxed-agent.md        # GitHub Copilot CLI Agent (relaxed)
-├── GPT-5_and_GPT-5-Codex/
-│   ├── mpa-strict-system-prompt.md     # GPT-5/Codex (strict)
-│   └── mpa-relaxed-system-prompt.md    # GPT-5/Codex (relaxed)
-├── mpa-rules.md                         # Original strict rules
-├── mpa-relaxed-rules.md                 # Original relaxed rules (jQuery)
+│       ├── mpa-strict-rules.mdc         # .mdc format (strict)
+│       └── mpa-relaxed-rules.mdc        # .mdc format (relaxed)
+│
+├── .windsurf/                            # Windsurf IDE
+│   ├── mpa-strict-rules.md              # .windsurfrules format (strict)
+│   └── mpa-relaxed-rules.md             # .windsurfrules format (relaxed)
+│
+├── .gemini/                              # Gemini CLI
+│   ├── GEMINI-MPA-STRICT.md             # GEMINI.md format (strict)
+│   └── GEMINI-MPA-RELAXED.md            # GEMINI.md format (relaxed)
+│
+├── .claude/                              # Claude Desktop/Projects
+│   ├── mpa-strict-instructions.md       # Custom instructions (strict)
+│   └── mpa-relaxed-instructions.md      # Custom instructions (relaxed)
+│
+├── .cline/                               # Cline
+│   ├── mpa-strict.md                    # .clinerules format (strict)
+│   └── mpa-relaxed.md                   # .clinerules format (relaxed)
+│
+├── .roo/                                 # Roo Code
+│   └── rules/
+│       ├── mpa-strict.md                # .roorules format (strict)
+│       └── mpa-relaxed.md               # .roorules format (relaxed)
+│
+├── claude-code/                          # Claude Code CLI
+│   ├── CLAUDE-MPA-STRICT.md             # CLAUDE.md format (strict)
+│   └── CLAUDE-MPA-RELAXED.md            # CLAUDE.md format (relaxed)
+│
+├── openai-codex/                         # OpenAI Codex CLI
+│   ├── AGENTS-MPA-STRICT.md             # AGENTS.md format (strict)
+│   └── AGENTS-MPA-RELAXED.md            # AGENTS.md format (relaxed)
+│
+├── GPT-5_and_GPT-5-Codex/                # GPT-5/ChatGPT
+│   ├── mpa-strict-system-prompt.md      # System prompt (strict)
+│   └── mpa-relaxed-system-prompt.md     # System prompt (relaxed)
+│
+├── jetbrains-ai/                         # JetBrains AI Assistant
+│   └── mpa-prompts.md                   # Prompt library templates
+│
+├── augment-code/                         # Augment Code
+│   ├── mpa-strict.md                    # Instructions (strict)
+│   └── mpa-relaxed.md                   # Instructions (relaxed)
+│
+├── kilo-code/                            # Kilo Code
+│   ├── mpa-strict.md                    # Rules (strict)
+│   └── mpa-relaxed.md                   # Rules (relaxed)
+│
+├── kiro/                                 # Kiro
+│   ├── mpa-strict.md                    # Instructions (strict)
+│   └── mpa-relaxed.md                   # Instructions (relaxed)
+│
+├── qwen-coder/                           # Qwen Coder
+│   ├── mpa-strict.md                    # Instructions (strict)
+│   └── mpa-relaxed.md                   # Instructions (relaxed)
+│
+├── system-prompts/                       # Generic System Prompts
+│   ├── mpa-strict-system-prompt.md      # For Bolt.new, Lovable, V0.app, Replit
+│   └── mpa-relaxed-system-prompt.md     # For Bolt.new, Lovable, V0.app, Replit
+│
+├── mpa-rules.md                          # Original strict rules
+├── mpa-relaxed-rules.md                  # Original relaxed rules (jQuery)
 └── README.md
 ```
 
