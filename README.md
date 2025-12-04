@@ -1,7 +1,27 @@
 
 # MPA Mandate, Rules & Guidelines for AI-Assisted Development Tools v2
+   >  **<center>AI-Assisted & Agent Development guiding principles for building performant, resilient Multi-Page Applications .</br>
+   </br>AI coding tools default to SPAs. This <ins>changes</ins> that.</center>**</br>
+   These guiding principles restore the native strengths of HTML, CSS, and server-rendered architecture, capabilities the platform has quietly perfected.
+   JavaScript is for enhancement, not enablement. Core functionality works without it.
+   Designed for seamless integration with GitHub Copilot, Cursor, Claude, and other AI assistants.
+   > Designed for seamless integration with major AI coding assistants to enforce MPA-first development practices automatically.
+>
+**Changelog:**  
+   Last Update: Dec 2025
+###
+   v2 Changes:
 
-Guiding principles for building performant, resilient Multi-Page Applications. Focus on native web platform strengths, minimal JS, and robust SEO.
+- Major assistant-specific instruction formats added
+- See repository structure for new subfolder organization and integration steps
+- Wording refinements for clarity and emphasis of MPA-first philosophy.
+
+## 🌐 Overview
+For over a decade, web development has trended towards complex, JavaScript-heavy Single-Page Applications (SPAs). The promise was a slick, "app-like" user experience. The reality, in most cases, has been bloated, fragile, and over-engineered websites that are slow to load, difficult to maintain, and hostile to users and search engines.
+
+This document outlines a return to a more resilient, performant, and durable web. We are intentionally choosing a **Multi-Page Application (MPA)** architecture. The guiding principle is to **use the platform**. We build upon the native strengths of HTML, CSS, and the browser itself, which have evolved significantly. Modern features like CSS View Transitions and Speculation Rules now provide the fluid user experience that once required megabytes of JavaScript, but without the performance penalty.
+
+We are choosing simplicity, speed, and maintainability over unnecessary complexity. We build for users and outcomes, not for developer experience (DX) or architectural novelty. JavaScript is a powerful tool for progressive enhancement, not the default foundation for every page.
 
 ## 💡 The Problem
 
