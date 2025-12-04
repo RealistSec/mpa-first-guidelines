@@ -1,5 +1,5 @@
 
-# MPA Mandate, Rules & Guidelines for AI-Assisted Development Tools
+# MPA Mandate, Rules & Guidelines for AI-Assisted Development Tools v2
 
 Guiding principles for building performant, resilient Multi-Page Applications. Focus on native web platform strengths, minimal JS, and robust SEO.
 
