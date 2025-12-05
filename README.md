@@ -1,20 +1,34 @@
 
-# MPA Mandate, Rules & Guidelines for AI-Assisted Development Tools v2
-   >  **<center>AI-Assisted & Agent Development guiding principles for building performant, resilient Multi-Page Applications .</br>
-   </br>AI coding tools default to SPAs. This <ins>changes</ins> that.</center>**</br>
-   These guiding principles restore the native strengths of HTML, CSS, and server-rendered architecture, capabilities the platform has quietly perfected.
-   JavaScript is for enhancement, not enablement. Core functionality works without it.
-   Designed for seamless integration with GitHub Copilot, Cursor, Claude, and other AI assistants.
-   > Designed for seamless integration with major AI coding assistants to enforce MPA-first development practices automatically.
->
-**Changelog:**  
-   Last Update: Dec 2025
-###
-   v2 Changes:
+# MPA Mandate: Rules & Guidelines for AI-Assisted Development Tools (v2)
 
-- Major assistant-specific instruction formats added
-- See repository structure for new subfolder organization and integration steps
-- Wording refinements for clarity and emphasis of MPA-first philosophy.
+> **AI-assisted coding tools are biased toward complexity. This *changes* that.**
+>
+> These Rules & Guidelines provide the context to deprogram the "SPA-by-default" bias in 15+ AI tools, restoring the native strengths of HTML, CSS, and server-rendered architecture.
+
+The web has matured. Modern capabilities like View Transitions and Speculation Rules have rendered the SPA complexity tax unnecessary. These guidelines force a return to the platform capabilities that have been quietly had their enhancements perfected while the industry was distracted by frameworks.
+
+**The Philosophy:**
+* **MPA-First:** Server-rendered architecture is the default.
+* **JavaScript is for enhancement, not enablement.** Core functionality should work without it.
+* **Performance is native, not imported.**
+
+**Integration:**
+Designed for seamless integration with **GitHub Copilot, Cursor, Windsurf, Gemini, Claude, Codex,** and **10+ other assistants** to automatically enforce MPA-first development practices.
+
+---
+
+### Changelog
+**Last Update:** Dec 2025
+
+**v2 Changes:**
+* Major assistant-specific instruction formats added.
+* New subfolder organization and integration steps (see repository structure).
+* Refined wording for clarity and emphasis on the MPA-first philosophy.
+
+
+</br>
+
+**AI Models are biased toward complexity. We retrain them for resilience.**
 
 ## 🌐 Overview
 For over a decade, web development has trended towards complex, JavaScript-heavy Single-Page Applications (SPAs). The promise was a slick, "app-like" user experience. The reality, in most cases, has been bloated, fragile, and over-engineered websites that are slow to load, difficult to maintain, and hostile to users and search engines.
@@ -25,16 +39,20 @@ We are choosing simplicity, speed, and maintainability over unnecessary complexi
 
 ## 💡 The Problem
 
-Modern AI code generation tools (like GitHub Copilot, Cursor, Claude Code, Gemini CLI, etc.) and models (Claude Sonnet/Opus, Gemini Pro, GPT-4o, etc.) are primarily trained on the prevailing web development paradigm: **complex, JavaScript-heavy Single-Page Applications (SPAs)**. This often leads to generated code that is bloated, fragile, and contrary to principles of performance, resilience, and maintainability.
+Modern AI code generation tools (like GitHub Copilot, Cursor, Claude Code, Gemini CLI, etc.) and models (Claude Sonnet/Opus, Gemini Pro, GPT-5, etc.) are primarily trained on the prevailing web development paradigm: **complex, JavaScript-heavy Single-Page Applications (SPAs)**. This often leads to generated code that is bloated, fragile, and contrary to principles of performance, resilience, and maintainability.
 
 ## ✨ The Solution: An MPA-First Philosophy
 
-This repository provides a concise set of development rules championing a **Multi-Page Application (MPA) architecture**. We advocate leveraging the native strengths of HTML, PHP, CSS, and the browser itself, treating JavaScript as a tool for **progressive enhancement** only. This approach aims for:
+This repository provides a concise set of development rules championing a **Multi-Page Application (MPA) architecture**. We advocate leveraging the native strengths of HTML, PHP, CSS, and the browser itself, treating JavaScript as a tool for **progressive enhancement** only. 
+
+**Performance is native, not imported.**
+
+This approach aims for:
 
 * **Optimal Performance:** Faster load times and smoother navigation.
 * **Enhanced Resilience:** Less dependency on complex client-side logic.
 * **Superior Maintainability:** Simpler architecture, fewer moving parts.
-* **Inherent SEO & Accessibility:** Built upon web standards.
+* **Inherent SEO & Accessibility:** Built upon modern web standards.
 
 ## 💡 Quick Start
 
@@ -56,7 +74,7 @@ Choose the version that best fits your project requirements.
 ## 🚀 Setup Instructions for Your AI Assistant
 
 ### Getting Started
-
+### Step 1: Clone the Repository
 <details>
 <summary><strong>First, clone this repository to get all the MPA-First guideline files:</strong></summary>
 
@@ -68,10 +86,13 @@ cd mpa-first-guidelines
 </details>
 
 
-### Then choose your AI assistant below and follow the specific setup instructions.
+### Step 2: Setup for Your AI Assistant
+### Choose your AI assistant below and follow the specific setup instructions.
 
-### For GitHub Copilot IDE Integration
 
+### For GitHub Copilot in VS Code
+<details>
+<summary><strong>Expand for GitHub Copilot in VS Code</strong></summary>
 1. Copy the appropriate agent file to `.github/agents/` in your project root:
 
    ```sh
@@ -95,6 +116,10 @@ cd mpa-first-guidelines
    ```
 
    > If `.github/copilot-instructions.md` already contains custom instructions, **append** the agent reference instead of overwriting.
+
+</details>
+
+### For GitHub Copilot CLI
 
 <details>
 <summary><strong>For GitHub Copilot CLI setup</strong></summary>
