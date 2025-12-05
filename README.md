@@ -7,7 +7,7 @@
 
 The web has matured. Modern capabilities like View Transitions and Speculation Rules have rendered the SPA complexity tax unnecessary. These guidelines force a return to the platform capabilities that have been quietly had their enhancements perfected while the industry was distracted by frameworks.
 
-**The Philosophy:**
+ **💭 The Philosophy:**
 * **MPA-First:** Server-rendered architecture is the default.
 * **JavaScript is for enhancement, not enablement.** Core functionality should work without it.
 * **Performance is native, not imported.**
